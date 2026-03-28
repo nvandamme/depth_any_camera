@@ -33,7 +33,8 @@ Notably, DAC can be **trained exclusively on perspective images**, yet it genera
 
 ## News
 
-- 2025-03-12: Add scripts to run fisheye scenes of ZipNeRF and ScanNet++ datasets. Results are downloadable from [ZipNeRF DAC results](https://huggingface.co/yuliangguo/depth-any-camera/blob/main/zipnerf_dac_swinl_indoor_2025_01.zip), and [ScanNet++ DAC results](https://huggingface.co/yuliangguo/depth-any-camera/blob/main/scannetpp_dac_swinl_indoor_2025_01.zip) to facilitate NeRF and Gaussian Splatting development.
+- 2026-03-28: The code for [UniDAC](https://github.com/girish1511/UniDAC) (CVPR 2026) -- a universial version of DAC model -- is released.
+- 2025-03-12: Add scripts to run fisheye scenes of ZipNeRF and ScanNet++ datasets. Results are downloadable from [ZipNeRF DAC results](https://huggingface.co/yuliangguo/depth-any-camera/blob/main/zipnerf_dac_swinl_indoor_2025_01.zip), and [ScanNet++ DAC results](https://huggingface.co/yuliangguo/depth-any-camera/blob/main/scannetpp_dac_swinl_indoor_2025_01.zip) to facilitate NeRF and Gaussian Splatting from generic cameras, e.g., [3DGEER](https://github.com/boschresearch/3dgeer).
 - 2025-02-26: Depth Any Camera accepted by CVPR 2025!
 - 2025-01-21: Demo code for easy setup and usage.
 - 2025-01-13: Release of pre-trained DepthAnyCamera (DAC) models trained on moderately sized datasets.
@@ -161,7 +162,7 @@ python demo/demo_dac_single.py --config-file checkpoints/dac_swinl_indoor.json -
 
 ## Run on ZipNeRF (fisheye) and ScanNet++ (fisheye) Scenes
 
-To better facilitate the development of Neural Reconstruction technique on fisheye inputs, e.g., [SMERF](https://smerf-3d.github.io/), [Fisheye GS](https://github.com/zmliao/Fisheye-GS), and [EVER](https://github.com/half-potato/ever_training), we provide scripts to conduct depth estimation on fisheye images for a whole scene folder.
+To better facilitate the development of Neural Reconstruction technique on fisheye inputs, e.g., [EVER](https://github.com/half-potato/ever_training), [3DGUT](https://github.com/nv-tlabs/3dgrut) and [3DGEER](https://github.com/boschresearch/3dgeer), we provide scripts to conduct depth estimation on fisheye images for a whole scene folder.
 
 ```bash
 python demo/run_dac_zipnerf_scene.py
